@@ -1,0 +1,23 @@
+<div class="event-body">
+  <h1 class="page-title | title">EVENTS <span class="slideshow__title__offset | title__offset">CIO Rally 2020</span></h1>
+  <section class="content | scrollarea-ctn">
+    <div class="scrollarea custom-scroll-bar" (scroll)="onScroll($event)">
+      <ul class="slideshow-list">
+        <li *ngFor="let option of [1,2,3,4,5]" class="slideshow-list__el" >
+          <article class="tile | js-tile" (click)="openDataView()">
+            <figure class="tile__fig">
+              <img src="assets\stevejobs.jpg" data-hover="dist/img/Mankarne Teja.jpg" alt="" class="tile__img">
+            </figure>
+            <div class="tile__content">
+              <h2 class="tile__title | title title--medium ">Data Boom <span class="title__offset title__offset--medium">& AI</span></h2>
+              <div class="tile__cta">
+                <span class="btn-inline">21 July,2020 3:00PM</span>
+              </div>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </div>
+    <div class="slideshow__progress-ctn"><span class="slideshow__progress"></span></div>
+  </section>
+</div>

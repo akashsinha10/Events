@@ -1,0 +1,19 @@
+@import url('https://use.typekit.net/lma7zwj.css');
+/*@import url('../../assets/app.css');*/
+
+
+.custom-scroll-bar {
+  width: 100%;
+  overflow: auto;
+  height: 100%;
+}
+
+
+::-webkit-scrollbar {
+  width: 0px; 
+  background: transparent; 
+}
+
+.tile:hover {
+  cursor: pointer
+}
