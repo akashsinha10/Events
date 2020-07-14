@@ -21,6 +21,7 @@
     "@angular/router": "~8.2.13",
     "glslify": "^7.0.0",
     "gsap": "^3.3.4",
+    "lodash": "^4.17.19",
     "rxjs": "~6.4.0",
     "smooth-scrollbar": "^8.5.2",
     "three": "^0.118.3",
