@@ -6,17 +6,19 @@ import { AppComponent } from './app.component';
 import { EventsComponent } from './events/events.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
+import { ParticlesModule } from 'angular-particle';
 
 @NgModule({
   declarations: [
     AppComponent,
     EventsComponent,
-    EventDetailsComponent
+    EventDetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ParticlesModule
   ],
   providers: [],
   bootstrap: [AppComponent],

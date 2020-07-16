@@ -1,20 +1,44 @@
+<!-- <style>
+.tile_cta{
+    background-image: url(https://motionarray.imgix.net/preview-180750-gnHHxAiz5K-high_0012.jpg);
+  }
+</style> -->
+
+
 <div class="event-body">
   <div>
-    <h1 @titleVisibleState *ngIf="!toggleView" class="page-title | title">EVENTS <span class="slideshow__title__offset | title__offset">CIO Rally 2020</span></h1>
+    
+    <h1 @titleVisibleState *ngIf="!toggleView" class="page-title | title">PEOPLE'S <span class="slideshow__title__offset | title__offset">CIO Rally 2020</span></h1>
+    <div id="particles-js"></div>
     <section @listVisibleState   *ngIf="!toggleView" class="content | scrollarea-ctn">
+<!--       
+  <particles id= "particles"  [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles> -->
+  <div style="width: 100%; height: 30px;">
+    <img
+      src="assets/dell-logo.png"
+      height="40px"
+      style="margin-left: 35px; margin-top: 25px;"
+    />
+    <img
+      src="assets/PMR.png"
+      height="95px"
+      width="270px"
+      style="margin-left:730px; margin-top: 25px;"
+    />
+    </div>
       <div class="scrollarea custom-scroll-bar" (scroll)="onScroll($event)">
         <ul class="slideshow-list">
           <li *ngFor="let event of eventDetails;  let indexOfelement=index" class="slideshow-list__el">
             <article class="tile | js-tile" (click)="onImageClick(indexOfelement)">
-              <figure class="tile__fig">
-                <img src={{event.src}} class="tile__img">
+            <figure class="tile__fig">
+                  <img src={{event.src}} class="tile__img">
               </figure>
               <div class="tile__content">
-                <h2 class="tile__title | title title--medium ">{{event.title1}}<span class="title__offset title__offset--medium">{{event.title2}}</span></h2>
+               <h2 class="tile__title | title title--medium ">{{event.title1}}<span class="title__offset title__offset--medium">{{event.title2}}</span></h2>
                 <div class="tile__cta">
                   <span class="btn-inline">{{event.eventAt}}</span>
                 </div>
-              </div>
+            </div>
             </article>
           </li>
         </ul>

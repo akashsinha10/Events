@@ -5,7 +5,7 @@ import { takeUntil } from 'rxjs/operators';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { DOCUMENT } from '@angular/common';
 import { eventDetails, EventDetails } from 'src/app/models/event-details';
-
+declare var particlesJS: any;
 @Component({
     selector: 'app-events',
     templateUrl: './events.component.html',
@@ -58,11 +58,13 @@ export class EventsComponent implements OnInit, AfterViewInit {
         this.eventDetails = eventDetails;
     }
     ngOnInit() {
+        particlesJS.load('particles-js', 'assets/data/particles.json', function() { console.log('callback - particles.js config loaded'); });
+
         //Change Background Color after every 4seconds
         interval(4000).pipe(takeUntil(this.subject$)).subscribe(data => {
             this.changeBackgroundColor();
         })
-    }
+      }
 
     ngAfterViewInit() {
         //Get elements from element Ref
@@ -76,6 +78,7 @@ export class EventsComponent implements OnInit, AfterViewInit {
         this.idx++;
         this.document.querySelector(":root").style.setProperty('--color-bg', `var(--color-bg${(this.idx % 5) + 1})`);
         this.document.querySelector(":root").style.setProperty('--color-text', `var(--color-text${(this.idx % 5) + 1})`);
+        
     }
 
     // Used to update the scroll div
